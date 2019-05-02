@@ -1,0 +1,6 @@
+*.Rhistory
+*.RData
+
+// any output file
+figure/*
+!figure/dummy.txt
