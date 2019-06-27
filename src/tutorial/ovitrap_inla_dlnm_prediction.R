@@ -73,7 +73,7 @@ for (row_i in 9:120) {
   temp.row <- cb.meanTemperature[row_i,]
   rain.row <- cb.totalRainfall[row_i,]
   
-  # following the formula ovitrap_idx ~ cb.meanTemperature + cb.totalRainfall
+  # following the formula ovitrap_idx ~ cb.meanTemperature + cb.totalRainfall ( + intercept)
   predicted[row_i] <- sum(temp.row * info.meanTemperature$coef) +
                       sum(rain.row * info.totalRainfall$coef) + inla.intercept
 }
