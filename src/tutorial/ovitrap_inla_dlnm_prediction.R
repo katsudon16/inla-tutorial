@@ -80,3 +80,5 @@ for (row_i in 9:120) {
 predicted[predicted < 0] <- 0
 plot(data$ovitrap_idx, type="l", col="red")
 lines(predicted, col="blue")
+legend("topright", legend=c("observed", "predicted"), col=c("red", "blue"),
+       lty=1:1, lwd=2:2, cex=1.1, inset=c(0.40, 0.01))
